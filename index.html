@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speech Tutor - Madan Mohan Mishra</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #e0f7fa; /* Light blue background */
+    }
+    .container {
+      text-align: center;
+      padding: 30px;
+      border: 3px solid #0277bd; /* Blue border */
+      border-radius: 15px;
+      background-color: #b3e5fc; /* Matching light blue container */
+      width: 80%;
+      max-width: 600px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .header img {
+      width: 80px; /* Tutor logo size */
+      height: 80px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    h1 {
+      color: #01579b; /* Darker blue text for the header */
+    }
+    p {
+      font-size: 18px;
+      color: #0277bd;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      color: white;
+      background-color: #0288d1; /* Button blue */
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #01579b; /* Darken button on hover */
+    }
+    .feedback {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #01579b; /* Feedback text color */
+    }
+    .progress {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #01579b;
+    }
+    .resources {
+      margin-top: 30px;
+    }
+    .resources h2 {
+      color: #01579b;
+      font-size: 22px;
+    }
+    .resources ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .resources ul li {
+      margin: 10px 0;
+    }
+    .resources ul li a {
+      color: #0277bd;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .resources ul li a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Tutor Header with Logo -->
+    <div class="header">
+      <img src="th.jpeg" alt="Tutor Logo" />
+      <h1>Madan Mohan Mishra - English Tutor</h1>
+    </div>
+
+    <p id="targetText">Click the button to get your phrase!</p>
+    <button onclick="startRecognition()">Start Speaking</button>
+    <div class="feedback" id="feedback"></div>
+    <div class="progress" id="progress"></div>
+
+    <!-- Learning Resources Section -->
+    <div class="resources">
+      <h2>Learning Resources</h2>
+      <ul>
+        <li><a href="https://www.bbc.co.uk/learningenglish" target="_blank">BBC Learning English</a></li>
+        <li><a href="https://www.duolingo.com/course/en/learn" target="_blank">Duolingo English Course</a></li>
+        <li><a href="https://www.coursera.org/courses?query=english" target="_blank">Coursera - English Learning Courses</a></li>
+        <li><a href="https://www.englishclub.com/" target="_blank">English Club</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
